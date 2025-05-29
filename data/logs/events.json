@@ -1,0 +1,23 @@
+[
+    {
+        "timestamp": "2023-10-01T12:00:00Z",
+        "species": "squirrel",
+        "confidence": 0.95,
+        "image_path": "data/samples/images/squirrel_001.jpg",
+        "video_clip": "data/samples/videos/squirrel_001.mp4"
+    },
+    {
+        "timestamp": "2023-10-01T12:05:00Z",
+        "species": "bird",
+        "confidence": 0.89,
+        "image_path": "data/samples/images/bird_001.jpg",
+        "video_clip": "data/samples/videos/bird_001.mp4"
+    },
+    {
+        "timestamp": "2023-10-01T12:10:00Z",
+        "species": "dog",
+        "confidence": 0.92,
+        "image_path": "data/samples/images/dog_001.jpg",
+        "video_clip": "data/samples/videos/dog_001.mp4"
+    }
+]

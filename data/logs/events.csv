@@ -1,0 +1,6 @@
+timestamp,species,confidence,image_path,video_path
+2023-10-01 12:00:00,squirrel,0.95,/data/samples/images/squirrel_001.jpg,/data/samples/videos/squirrel_001.mp4
+2023-10-01 12:05:00,bird,0.89,/data/samples/images/bird_001.jpg,/data/samples/videos/bird_001.mp4
+2023-10-01 12:10:00,dog,0.92,/data/samples/images/dog_001.jpg,/data/samples/videos/dog_001.mp4
+2023-10-01 12:15:00,human,0.99,/data/samples/images/human_001.jpg,/data/samples/videos/human_001.mp4
+2023-10-01 12:20:00,snake,0.85,/data/samples/images/snake_001.jpg,/data/samples/videos/snake_001.mp4

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Detection Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Wildlife Detection Dashboard</h1>
+        <div class="video-feed">
+            <h2>Real-Time Video Feed</h2>
+            <video id="video" autoplay></video>
+        </div>
+        <div class="event-logs">
+            <h2>Event Logs</h2>
+            <table id="logs-table">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Species</th>
+                        <th>Confidence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Event log entries will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        // JavaScript to handle video feed and log updates
+        const videoElement = document.getElementById('video');
+
+        // Function to fetch and update logs
+        function updateLogs() {
+            fetch('/logs')
+                .then(response => response.json())
+                .then(data => {
+                    const logsTableBody = document.querySelector('#logs-table tbody');
+                    logsTableBody.innerHTML = '';
+                    data.forEach(log => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `<td>${log.timestamp}</td><td>${log.species}</td><td>${log.confidence}</td>`;
+                        logsTableBody.appendChild(row);
+                    });
+                });
+        }
+
+        // Update logs every 5 seconds
+        setInterval(updateLogs, 5000);
+    </script>
+</body>
+</html>

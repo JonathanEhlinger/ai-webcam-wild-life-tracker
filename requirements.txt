@@ -1,0 +1,18 @@
+Flask>=2.2
+torch
+torchvision
+opencv-python
+numpy
+pandas
+requests
+whisper
+gTTS
+matplotlib
+jsonschema
+ultralytics
+pyttsx3
+pillow
+
+# Looks good. Ensure these are installed in your environment.
+# As you implement features, you might need to add more, e.g., specific versions
+# or libraries for advanced image/video processing if opencv-python isn't enough.
