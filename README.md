@@ -1,155 +1,68 @@
-<<<<<<< HEAD
-# Wildlife Detection System (Desktop GUI)
+# Wildlife Detection System
+
+A system for detecting and classifying wildlife in images using AI and computer vision.
 
 ## Features
-- Live camera feed with camera selection
-- YOLOv8 AI detection (bounding boxes and labels)
-- Save frames and log detections
-- View logs in-app
 
-## Setup
+- Detects wildlife in images and video streams
+- Classifies detected animals by species
+- Provides annotated output with bounding boxes and labels
+- Modular and extensible codebase
 
-1. Install Python 3.10+.
-2. Create and activate a virtual environment (optional but recommended).
-3. Install dependencies:
+## Requirements
+
+- Python 3.8+
+- OpenCV
+- PyTorch
+- NumPy
+- Other dependencies listed in `requirements.txt`
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/ejona/wildlife-detection-system.git
+   cd wildlife-detection-system
+   ```
+2. Install dependencies:
    ```
    pip install -r requirements.txt
-   ```
-4. Run the GUI:
-   ```
-   python main_gui.py
    ```
 
 ## Usage
 
-- Use **Options** to select your camera index.
-- Click **Start Camera** to view the feed.
-- Toggle **Enable AI Detection** for bounding boxes.
-- Click **Save Frame** to save and log detections.
-- Click **View Logs** to see detection history.
-
-## How to Post This Project to GitHub
-
-1. **Initialize a git repository (if you haven't already):**
-   ```
-   git init
-   ```
-
-2. **Add all files:**
-   ```
-   git add .
-   ```
-
-3. **Commit your changes:**
-   ```
-   git commit -m "Initial commit of wildlife detection system"
-   ```
-
-4. **Add your GitHub remote:**
-   ```
-   git remote add origin https://github.com/joanthanehlinger/ai-webcam-wild-life-tracker.git
-   ```
-
-5. **Push your code to GitHub:**
-   ```
-   git branch -M main
-   git push -u origin main
-   ```
-
-6. **Your code is now posted to GitHub at:**
-   ```
-   https://github.com/joanthanehlinger/ai-webcam-wild-life-tracker
-   ```
-
-## Troubleshooting "Repository not found" on git push
-
-If you see:
+To run detection on an image:
 ```
-remote: Repository not found.
-fatal: repository 'https://github.com/joanthanehlinger/ai-webcam-wild-life-tracker.git/' not found
+python detect.py --image path/to/image.jpg
 ```
-**This means the repository does not exist on GitHub or you do not have permission.**
 
-### How to fix:
+To run detection on a video:
+```
+python detect.py --video path/to/video.mp4
+```
 
-1. **Go to [https://github.com/new](https://github.com/new) and create a new repository**  
-   - Name it: `ai-webcam-wild-life-tracker`
-   - Make sure it is under your account: `jonathanehlinger`
+For additional options, use:
+```
+python detect.py --help
+```
 
-2. **Do NOT initialize with a README, .gitignore, or license** (your local repo already has these).
+## Model Training
 
-3. **After creating the repo, run these commands again in your terminal:**
-   ```
-   git remote remove origin
-   git remote add origin https://github.com/jonathanehlinger/ai-webcam-wild-life-tracker.git
-   git push -u origin main
-   ```
+To train a new model, use:
+```
+python train.py --data path/to/dataset
+```
+Refer to the documentation for dataset format and training options.
 
-If prompted, log in with your GitHub credentials or use a personal access token.
+## Output
 
-## Pushing to your GitHub repository
+- Annotated images and videos are saved in the `output/` directory.
+- Logs and model checkpoints are stored in the `logs/` and `checkpoints/` directories.
 
-1. **If you haven't already, create the repository at:**  
-   https://github.com/JonathanEhlinger/ai-webcam-wild-life-tracker
+## Contributing
 
-2. **Update your remote and push:**
-   ```
-   git remote remove origin
-   git remote add origin https://github.com/JonathanEhlinger/ai-webcam-wild-life-tracker.git
-   git push -u origin main
-   ```
+Contributions are welcome. Please submit pull requests or open issues for suggestions and bug reports.
 
-3. **If prompted, log in with your GitHub credentials or use a personal access token.**
+## License
 
-4. **Your code will now be live at:**  
-   https://github.com/JonathanEhlinger/ai-webcam-wild-life-tracker
-
-## Fixing "Malformed input to a URL function" when pushing to GitHub
-
-You have a typo or extra character in your remote URL.  
-**To fix:**
-
-1. Remove the incorrect remote:
-   ```
-   git remote remove origin
-   ```
-
-2. Add the correct remote (no extra characters, no trailing `?` or `/`):
-   ```
-   git remote add origin https://github.com/JonathanEhlinger/ai-webcam-wild-life-tracker.git
-   ```
-
-3. Push your code:
-   ```
-   git push -u origin main
-   ```
-
-If prompted, log in with your GitHub credentials or use a personal access token.
-
-## Fixing "Updates were rejected because the remote contains work that you do not have locally"
-
-This means your GitHub repository already has some commits (like a README or .gitignore created on GitHub).
-
-**To fix:**
-
-1. **Pull the remote changes and merge:**
-   ```
-   git pull origin main --allow-unrelated-histories
-   ```
-
-2. **Resolve any merge conflicts if prompted.**
-
-3. **Add and commit any resolved files:**
-   ```
-   git add .
-   git commit -m "Merge remote-tracking branch 'origin/main'"
-   ```
-
-4. **Push your code:**
-   ```
-   git push -u origin main
-   ```
-=======
-# ai-webcam-wild life tracker
-use ai to track wildlife and people. keeps logs and displays information based on what the program sees
->>>>>>> 1e2b979e3cf34f71dec37f73a104bf9ddaac0fde
+This project is licensed under the MIT License.
