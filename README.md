@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Wildlife Detection System (Desktop GUI)
 
 ## Features
@@ -148,3 +149,7 @@ This means your GitHub repository already has some commits (like a README or .gi
    ```
    git push -u origin main
    ```
+=======
+# ai-webcam-wild life tracker
+use ai to track wildlife and people. keeps logs and displays information based on what the program sees
+>>>>>>> 1e2b979e3cf34f71dec37f73a104bf9ddaac0fde
