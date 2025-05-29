@@ -55,4 +55,96 @@
    git push -u origin main
    ```
 
-6. **Your code is now posted to GitHub!**
+6. **Your code is now posted to GitHub at:**
+   ```
+   https://github.com/joanthanehlinger/ai-webcam-wild-life-tracker
+   ```
+
+## Troubleshooting "Repository not found" on git push
+
+If you see:
+```
+remote: Repository not found.
+fatal: repository 'https://github.com/joanthanehlinger/ai-webcam-wild-life-tracker.git/' not found
+```
+**This means the repository does not exist on GitHub or you do not have permission.**
+
+### How to fix:
+
+1. **Go to [https://github.com/new](https://github.com/new) and create a new repository**  
+   - Name it: `ai-webcam-wild-life-tracker`
+   - Make sure it is under your account: `jonathanehlinger`
+
+2. **Do NOT initialize with a README, .gitignore, or license** (your local repo already has these).
+
+3. **After creating the repo, run these commands again in your terminal:**
+   ```
+   git remote remove origin
+   git remote add origin https://github.com/jonathanehlinger/ai-webcam-wild-life-tracker.git
+   git push -u origin main
+   ```
+
+If prompted, log in with your GitHub credentials or use a personal access token.
+
+## Pushing to your GitHub repository
+
+1. **If you haven't already, create the repository at:**  
+   https://github.com/JonathanEhlinger/ai-webcam-wild-life-tracker
+
+2. **Update your remote and push:**
+   ```
+   git remote remove origin
+   git remote add origin https://github.com/JonathanEhlinger/ai-webcam-wild-life-tracker.git
+   git push -u origin main
+   ```
+
+3. **If prompted, log in with your GitHub credentials or use a personal access token.**
+
+4. **Your code will now be live at:**  
+   https://github.com/JonathanEhlinger/ai-webcam-wild-life-tracker
+
+## Fixing "Malformed input to a URL function" when pushing to GitHub
+
+You have a typo or extra character in your remote URL.  
+**To fix:**
+
+1. Remove the incorrect remote:
+   ```
+   git remote remove origin
+   ```
+
+2. Add the correct remote (no extra characters, no trailing `?` or `/`):
+   ```
+   git remote add origin https://github.com/JonathanEhlinger/ai-webcam-wild-life-tracker.git
+   ```
+
+3. Push your code:
+   ```
+   git push -u origin main
+   ```
+
+If prompted, log in with your GitHub credentials or use a personal access token.
+
+## Fixing "Updates were rejected because the remote contains work that you do not have locally"
+
+This means your GitHub repository already has some commits (like a README or .gitignore created on GitHub).
+
+**To fix:**
+
+1. **Pull the remote changes and merge:**
+   ```
+   git pull origin main --allow-unrelated-histories
+   ```
+
+2. **Resolve any merge conflicts if prompted.**
+
+3. **Add and commit any resolved files:**
+   ```
+   git add .
+   git commit -m "Merge remote-tracking branch 'origin/main'"
+   ```
+
+4. **Push your code:**
+   ```
+   git push -u origin main
+   ```
